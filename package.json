@@ -1,0 +1,19 @@
+{
+  "name": "docker_web_app",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "First Last <first.last@example.com>",
+  "type": "module",
+  "scripts": {
+    "start": "node --es-module-specifier-resolution=node dist/index.js"
+  },
+  "dependencies": {
+    "@anatine/zod-mock": "^0.4.0",
+    "faker": "^5.5.3",
+    "zod": "^3.8.2"
+  },
+  "devDependencies": {
+    "ts-to-zod": "^1.4.0",
+    "typescript": "^4.4.3"
+  }
+}
