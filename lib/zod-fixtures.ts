@@ -1,7 +1,7 @@
 import { z, ZodTypeAny, ZodObject, ZodNumber, ZodAny, ZodString, ZodDefault, ZodArray } from "zod"
 
 export class ZodFixtures {
-    createFixture<T extends ZodTypeAny>(zodRef: T): z.infer<typeof zodRef> {
+    public static createFixture<T extends ZodTypeAny>(zodRef: T): z.infer<typeof zodRef> {
         const fixture: any = {}
         if (zodRef instanceof ZodObject) {
             for (const key in zodRef.shape) {
@@ -19,7 +19,6 @@ export class ZodFixtures {
                 } else if (value instanceof ZodArray) {
                     fixture[key] = [12, 13];
                 }
-
             }
         }
         return fixture;
